@@ -1,0 +1,29 @@
+#服务端口
+server:
+  port: 8007
+  servlet:
+    context-path: /orderSystem
+security:
+  oauth2:
+    client:
+      client-id: OrderManagement   #必须的，在授权服务器中注册过的客户端标识符。
+      client-secret: order123      #必须的，客户端秘钥。如果秘钥是空字符串的话可以省略该参数。
+      access-token-uri: http://localhost:8006/oauth/token  #客户端通过使用“application/ www-form-urlencoding”格式发送以下参数向令牌端点发出请求
+      user-authorization-uri: http://localhost:8006/oauth/authorize
+    resource:
+      jwt:
+        key-uri: http://localhost:8006/oauth/token_key
+  #服务名称
+spring:
+  application:
+    name: oauth2-sso-client-order
+#服务注册与发现
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+  #是否显示IP地址
+  instance:
+    prefer-ip-address: true
+    #此实例注册到eureka服务端的唯一的实例ID
+    instance-id: user-7

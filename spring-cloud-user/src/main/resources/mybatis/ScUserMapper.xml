@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.summer.com.summer.springcloud.mapper.ScUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.summer.springcloud.springclouduser.entity.ScUser">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="password" property="password" />
+        <result column="birthday" property="birthday" />
+        <result column="sex" property="sex" />
+        <result column="age" property="age" />
+        <result column="address" property="address" />
+    </resultMap>
+
+<!--    <insert id="insert" parameterType="com.summer.springcloud.springclouduser.entity.ScUser">-->
+<!--        insert into sc_user(name,password,birthday,sex,age,address)-->
+<!--        values (#{name,jdbcType=VARCHAR},#{password,jdbcType=DATE},#{birthday,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR},-->
+<!--                #{age,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR})-->
+<!--    </insert>-->
+</mapper>

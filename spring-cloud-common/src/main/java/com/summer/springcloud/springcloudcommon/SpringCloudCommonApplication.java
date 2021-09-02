@@ -8,7 +8,6 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@ServletComponentScan
 @EnableEurekaClient
 @EnableConfigurationProperties({
         FileProperty.class

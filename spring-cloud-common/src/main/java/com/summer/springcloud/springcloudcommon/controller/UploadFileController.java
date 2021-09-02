@@ -3,6 +3,7 @@ package com.summer.springcloud.springcloudcommon.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -135,4 +137,28 @@ public class UploadFileController {
         }
         return "上传成功";
     }
+
+
+    /**
+     * 多文件上传
+     * 由于是多图片上传所以用数组来接。此处应该注意参数名应该和<input>中的name值相对应：
+     * @param pictures
+     * @return
+     * @throws Exception
+     */
+    //@RequestMapping("/pic")
+    //@ResponseBody
+    //public ResponseEntity<String> pic(MultipartFile[] pictures) throws Exception {
+    //    ResponseEntity<String> responseEntity = new ResponseEntity<>();
+    //    long count = Arrays.asList(pictures).stream().
+    //            map(MultipartFile::getOriginalFilename).
+    //            filter(String::isEmpty).count();
+    //    if (count == pictures.length) {
+    //        responseEntity.setCode(ResponseEntity.ERROR);
+    //        throw new Null0rEmptyException("图片不能同时为空");
+    //    }
+    //        responseEntity.setCode(ResponseEntity.OK);
+    //        responseEntity.setMessage("上传成功");
+    //        return responseEntity;
+    //}
 }

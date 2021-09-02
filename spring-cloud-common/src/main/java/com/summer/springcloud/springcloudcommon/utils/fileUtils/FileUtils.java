@@ -32,7 +32,7 @@ public class FileUtils {
      * 获取sic/main/resources下面任何路径的文件
      */
     public void getFileContent(){
-        ClassPathResource resource = new ClassPathResource("templates/file.jsp");
+        ClassPathResource resource = new ClassPathResource("templates/index.html");
         Properties properties = new Properties();
         try {
             log.info("读取sic/main/resources下的文件流");
@@ -49,10 +49,10 @@ public class FileUtils {
      * @return  返回文件绝对路径
      */
     public String getFilePath(){
-        ClassPathResource resource = new ClassPathResource("templates/file.jsp");
-        //path:E:\workspaces\practice\demo\demos\basic\spring-cloud-common\target\classes\templates\file.jsp
+        ClassPathResource resource = new ClassPathResource("templates/index.html");
+        //path:E:\workspaces\practice\demo\demos\basic\spring-cloud-common\target\classes\templates\index.html
         String path = resource.getFile().getPath();
-        //absolutePath:E:\workspaces\practice\demo\demos\basic\spring-cloud-common\target\classes\templates\file.jsp
+        //absolutePath:E:\workspaces\practice\demo\demos\basic\spring-cloud-common\target\classes\templates\index.html
         String absolutePath = resource.getFile().getAbsolutePath();
         System.out.println("path:"+path +"\nabsolutePath:"+absolutePath);
         return path;
@@ -60,7 +60,7 @@ public class FileUtils {
 
     /**
      * 获取文件类型
-     * @param failPath  文件路径   例如sic/main/resources下面的：   "templates/file.jsp"
+     * @param failPath  文件路径   例如sic/main/resources下面的：   "templates/index.html"
      * @return  返回文件类型  jsp
      */
     public String getFileType(String failPath){

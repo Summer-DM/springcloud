@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * Web安全过滤
+     * Web安全过滤---将下面的路径下的目录、文件全部放行，不用拦截
      * @param web
      * @throws Exception
      */

@@ -11,8 +11,10 @@
         <module name="spring-cloud-cloud" />
         <module name="spring-cloud-server" />
         <module name="oauth2-sso-auth-server" />
-        <module name="spring-cloud-utils" />
+        <module name="threadPoolTaskExecutor" />
+        <module name="Strategy-mode" />
         <module name="oauth2-sso-client-membe" />
+        <module name="spring-cloud-utils" />
         <module name="spring-cloud-common" />
         <module name="spring-cloud-web" />
         <module name="spring-cloud-user" />
@@ -20,12 +22,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="library" target="1.8" />
       <module name="sping-cloud-utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Strategy-mode" options="-parameters" />
       <module name="basic" options="-parameters" />
+      <module name="library" options="-parameters" />
       <module name="oauth2-sso-auth-server" options="-parameters" />
       <module name="oauth2-sso-client-membe" options="-parameters" />
       <module name="oauth2-sso-client-order" options="-parameters" />
@@ -37,6 +42,7 @@
       <module name="spring-cloud-user" options="-parameters" />
       <module name="spring-cloud-utils" options="-parameters" />
       <module name="spring-cloud-web" options="-parameters" />
+      <module name="threadPoolTaskExecutor" options="-parameters" />
     </option>
   </component>
 </project>

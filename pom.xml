@@ -20,6 +20,8 @@
         <module>oauth2-sso-auth-server</module>
         <module>oauth2-sso-client-order</module>
         <module>oauth2-sso-client-membe</module>
+        <module>threadPoolTaskExecutor</module>
+        <module>Strategy-mode</module>
     </modules>
 
     <parent>

@@ -22,6 +22,8 @@ SSO单点登录服务器：oauth2-sso-auth-server
 订单服务(针对SSO)：oauth2-sso-auth-order   
 用户服务（针对SSO）：oauth2-sso-auth-member    
 待定：spring-cloud-cloud  
+多线程实例：threadPoolTaskExecutor    
+
 
 
 ###目前实现功能

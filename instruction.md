@@ -23,6 +23,7 @@ SSO单点登录服务器：oauth2-sso-auth-server
 用户服务（针对SSO）：oauth2-sso-auth-member    
 待定：spring-cloud-cloud  
 多线程实例：threadPoolTaskExecutor    
+策略模式：Strategy-mode
 
 
 

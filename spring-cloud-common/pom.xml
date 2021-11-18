@@ -48,6 +48,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <!--引入HuTool依赖，方便项目中进行一些参数、身份证、银行卡等一系列的校验
          官网API学习： https://www.hutool.cn/docs/#/     -->
         <dependency>

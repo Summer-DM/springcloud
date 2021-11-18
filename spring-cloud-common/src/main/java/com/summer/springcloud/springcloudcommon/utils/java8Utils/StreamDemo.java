@@ -1,5 +1,6 @@
 package com.summer.springcloud.springcloudcommon.utils.java8Utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -83,6 +84,24 @@ public class StreamDemo {
         List<Integer> filterList = list.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
         System.out.printf("filterList=%s", filterList); // filterList=[2, 4, 6]
     }
+
+    /**
+     * 普通遍历forEach
+     */
+    public void testforEach() {
+        List<String> list = new ArrayList();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        List<String> list2 = new ArrayList();
+        list.stream().forEach(str ->{
+            list2.add(str);
+        });
+        System.out.println(list2);//a,b,c,d
+    }
+
+
 
     /**
      * 聚合

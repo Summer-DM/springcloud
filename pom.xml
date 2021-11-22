@@ -22,6 +22,7 @@
         <module>oauth2-sso-client-membe</module>
         <module>threadPoolTaskExecutor</module>
         <module>Strategy-mode</module>
+        <module>kafka</module>
     </modules>
 
     <parent>

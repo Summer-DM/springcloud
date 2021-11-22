@@ -83,45 +83,4 @@ public class DownloadFileController {
         }
         return "下载失败";
     }
-
-    @RequestMapping("/tree")
-    @ResponseBody
-    public Result getFilePath() {
-        Result re = new Result();
-        List<TreeModel> treeodel = new ArrayList<>();
-        List<TreeModel> treeodel2 = new ArrayList<>();
-        List<TreeModel> treeodel4 = new ArrayList<>();
-        TreeModel model = new TreeModel();
-        TreeModel model2 = new TreeModel();
-        TreeModel model3 = new TreeModel();
-        TreeModel model4 = new TreeModel();
-
-        model4.setId(4L);
-        model4.setParentId(2L);
-        model4.setName("大孙子");
-        treeodel4.add(model4);
-
-        model2.setId(2L);
-        model2.setParentId(1L);
-        model2.setName("大儿子");
-        model2.setChildModel(treeodel4);
-        treeodel2.add(model2);
-
-        model3.setId(3L);
-        model3.setParentId(1L);
-        model3.setName("二儿子");
-        treeodel2.add(model3);
-
-        model.setId(1L);
-        model.setName("父级");
-        model.setChildModel(treeodel2);
-        treeodel.add(model);
-
-        List<TreeModel> treeToJson = TreeModel.modelToJson(treeodel);
-        System.out.println("json转换成tree："+treeToJson);
-        re.setData(treeToJson);
-        re.setMessage("转换成功");
-        re.setCode("1");
-        return re;
-    }
 }
